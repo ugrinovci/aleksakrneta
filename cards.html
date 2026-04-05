@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - Clash Royale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: url('pozadina.png') no-repeat center center fixed; background-size: cover; min-height: 100vh; margin: 0; }
+        .font-cr { font-family: 'Arial Black', sans-serif; font-weight: 900; }
+
+        /* --- DESKTOP STILOVI --- */
+        .top-linija { background: #439a97; height: 60px; border-bottom: 2px solid black; }
+        .sidebar-desktop { background: #f0f0f0; width: 200px; height: calc(100vh - 60px); border-right: 2px solid black; float: left; }
+        .meni-link { display: block; padding: 12px 20px; color: black; text-decoration: none; font-weight: bold; border-bottom: 1px solid #ccc; text-align: center; }
+        .panel-desktop { background: #439a97; border: 3px solid black; border-radius: 20px; padding: 40px; width: 600px; }
+        .stats-tabela-desktop { background: rgba(255,255,255,0.1); border: 2px solid black; padding: 15px; border-radius: 10px; font-weight: bold; }
+
+        /* --- MOBILE STILOVI --- */
+        .mobile-header { background: #000; color: white; padding: 10px; font-weight: bold; border-bottom: 3px solid #439a97; }
+        .search-box-mobile { background-color: #439a97; border: 4px solid #000; padding: 8px; width: 100%; max-width: 350px; text-align: center; font-weight: 900; margin-bottom: 15px; }
+        .card-img-wrap { background-color: #000; border: 4px solid #000; border-radius: 25px; padding: 10px; display: inline-block; margin-bottom: 15px; }
+        .card-img-wrap img { width: 100px; height: auto; border-radius: 15px; }
+        .info-table-mobile { background-color: #439a97; border: 4px solid #000; width: 100%; max-width: 350px; padding: 15px; font-size: 13px; }
+        .info-table-mobile table { width: 100%; }
+        .info-table-mobile td { padding: 2px 0; font-weight: 900; }
+        .border-bottom-cr { border-bottom: 3px solid #000; }
+    </style>
+</head>
+<body>
+
+    <div class="d-none d-md-block h-100">
+        <div class="top-linija">
+            <img src="logo.png" style="height: 50px; margin-left: 35px; margin-top: 4px">
+        </div>
+        <div class="sidebar-desktop">
+            <p class="text-center fw-bold py-3 border-bottom border-dark bg-white m-0">HOME</p>
+            <a href="profile.html" class="meni-link">Profile</a>
+            <a href="deck.html" class="meni-link">Current deck</a>
+            <a href="cards.html" class="meni-link" style="background: #e9ecef;">Cards</a>
+            <a href="battles.html" class="meni-link">Battles</a>
+            <a href="clans.html" class="meni-link">Clans</a>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="height: calc(100vh - 60px); margin-left: 200px;">
+            <div class="panel-desktop shadow">
+                <h2 class="fw-bold mb-3 text-center">Cards</h2>
+                <div class="bg-white border border-dark p-2 mb-4 text-center fw-bold">Search card</div>
+                <div class="row align-items-start">
+                    <div class="col-5 text-center">
+                        <img src="hogrider.png" class="img-fluid border border-dark rounded shadow-sm">
+                    </div>
+                    <div class="col-7">
+                        <div class="stats-tabela-desktop">
+                            <p class="border-bottom border-dark pb-1">OSOBINE | VREDNOSTI</p>
+                            <div class="d-flex justify-content-between"><span>Retkost:</span> <span>Rare</span></div>
+                            <div class="d-flex justify-content-between"><span>Elixir:</span> <span>4</span></div>
+                            <div class="d-flex justify-content-between"><span>Tip:</span> <span>Troop</span></div>
+                            <div class="d-flex justify-content-between"><span>Brzina:</span> <span>Very Fast</span></div>
+                            <div class="d-flex justify-content-between"><span>Meta:</span> <span>Ground</span></div>
+                            <div class="d-flex justify-content-between"><span>Cilje:</span> <span>Buildings</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex d-md-none flex-column align-items-center vh-100">
+        <div class="mobile-header w-100 d-flex justify-content-between align-items-center px-3">
+            <span style="font-size: 20px;">Cards</span>
+            <span>🏠</span>
+        </div>
+
+        <div class="flex-grow-1 d-flex flex-column align-items-center w-100 px-4 py-2">
+            <div class="search-box-mobile font-cr">Search card</div>
+
+            <div class="card-img-wrap">
+                <img src="hogrider.png" alt="Card">
+            </div>
+
+            <div class="info-table-mobile font-cr">
+                <table class="table-borderless">
+                    <tr class="border-bottom-cr">
+                        <td>OSOBINE:</td>
+                        <td class="text-end">VREDNOSTI:</td>
+                    </tr>
+                    <tr><td>Retkost</td><td class="text-end">Rare</td></tr>
+                    <tr><td>Elixir</td><td class="text-end">4</td></tr>
+                    <tr><td>Tip</td><td class="text-end">Troop</td></tr>
+                    <tr><td>Brzina</td><td class="text-end">Very Fast</td></tr>
+                    <tr><td>Meta</td><td class="text-end">Ground</td></tr>
+                    <tr><td>Cilja</td><td class="text-end">Buildings</td></tr>
+                    <tr><td>Domet napada</td><td class="text-end">Melee</td></tr>
+                    <tr><td>Specijalno</td><td class="text-end">Preskače reke</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

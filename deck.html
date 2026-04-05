@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Deck - Clash Royale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background: url('pozadina.png') no-repeat center center fixed; 
+            background-size: cover; 
+            min-height: 100vh; 
+            margin: 0; 
+        }
+
+        /* --- ZAJEDNIČKI STIL ZA TEXT (GEJMERSKI) --- */
+        .font-cr {
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            text-transform: lowercase; /* Na tvojoj slici je winrate malim slovima */
+        }
+
+        /* --- DESKTOP STILOVI --- */
+        .top-linija { background: #439a97; height: 60px; border-bottom: 2px solid black; }
+        .sidebar-desktop { background: #f0f0f0; width: 200px; height: calc(100vh - 60px); border-right: 2px solid black; float: left; }
+        .meni-link { display: block; padding: 12px 20px; color: black; text-decoration: none; font-weight: bold; border-bottom: 1px solid #ccc; text-align: center; }
+        .panel-desktop { background: #439a97; border: 3px solid black; border-radius: 20px; padding: 40px; width: 500px; text-align: center; }
+        .karta-placeholder-desktop { background: rgba(255,255,255,0.2); border: 2px solid black; height: 100px; border-radius: 8px; }
+
+        /* --- MOBILE STILOVI (UI SA SLIKE) --- */
+        .mobile-header { background: #000; color: white; padding: 10px; font-weight: bold; border-bottom: 3px solid #439a97; }
+        .deck-container-mobile {
+            background-color: #439a97;
+            border: 4px solid #000;
+            padding: 15px;
+            width: 100%;
+            max-width: 350px;
+        }
+        /* Mesta za karte na mobilnom */
+        .karta-mobile {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 3px solid #000;
+            height: 70px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Trake ispod decka */
+        .info-bar-mobile {
+            background-color: #439a97;
+            border: 4px solid #000;
+            color: #000;
+            font-weight: 900;
+            padding: 12px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="d-none d-md-block h-100">
+        <div class="top-linija">
+            <img src="logo.png" style="height: 50px; margin-left: 35px; margin-top: 4px">
+        </div>
+
+        <div class="sidebar-desktop">
+            <p class="text-center fw-bold py-3 border-bottom border-dark bg-white m-0">HOME</p>
+            <a href="profile.html" class="meni-link">Profile</a>
+            <a href="deck.html" class="meni-link" style="background: #e9ecef;">Current deck</a>
+            <a href="cards.html" class="meni-link">Cards</a>
+            <a href="battles.html" class="meni-link">Battles</a>
+            <a href="clans.html" class="meni-link">Clans</a>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center" style="height: calc(100vh - 60px); margin-left: 200px;">
+            <div class="panel-desktop shadow">
+                <h2 class="fw-bold mb-4">Current Deck</h2>
+                <div class="row g-2 px-4">
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                    <div class="col-3"><div class="karta-placeholder-desktop"></div></div>
+                </div>
+                <p class="mt-4 fw-bold">Your deck costs 2.6 elixirs.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex d-md-none flex-column align-items-center vh-100">
+        <div class="mobile-header w-100 d-flex justify-content-between align-items-center px-3">
+            <span style="font-size: 20px;">Deck</span>
+            <span>🏠</span> </div>
+
+        <div class="flex-grow-1 d-flex flex-column justify-content-center align-items-center w-100 px-4">
+            
+            <div class="deck-container-mobile">
+                <div class="row g-2">
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                    <div class="col-3"><div class="karta-mobile"></div></div>
+                </div>
+            </div>
+
+            <div class="info-bar-mobile font-cr">
+                your deck costs 2.6 elixirs
+            </div>
+
+            <div class="info-bar-mobile font-cr">
+                winrate with your deck is 67%
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
